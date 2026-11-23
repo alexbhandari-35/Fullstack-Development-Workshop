@@ -1,0 +1,175 @@
+/* ---------- Base ---------- */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+	background-color: #a9d6e5;
+	color: #012a4a;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+}
+
+a {
+	color: #01497c;
+}
+
+a:hover {
+	color: #fb6f92;
+}
+
+img, video {
+	max-width: 100%;
+}
+
+/* ---------- CSS Grid: page layout (header spans both columns) ---------- */
+.card {
+	display: grid;
+	grid-template-columns: 1fr 280px;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff7f9;
+	border-radius: 20px;
+}
+
+header {
+	grid-column: 1 / -1;
+}
+
+main section {
+	margin-bottom: 30px;
+	padding: 20px;
+	background-color: #ffe5ec;
+	border: 2px solid #ffb3c6;
+	border-radius: 10px;
+}
+
+aside {
+	padding: 20px;
+	background-color: #e8f3f8;
+	border: 2px solid #89c2d9;
+	border-radius: 10px;
+}
+
+/* ---------- Flexbox: navigation ---------- */
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+	padding: 15px 20px;
+	background-color: #013a63;
+	border-radius: 10px;
+}
+
+nav h1 {
+	margin: 0;
+	color: white;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav a {
+	display: block;
+	padding: 8px 14px;
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+}
+
+nav a:hover {
+	background-color: #fb6f92;
+	color: #012a4a;
+}
+
+/* ---------- CSS Grid: course cards ---------- */
+.course-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px;
+}
+
+.course-grid article {
+	padding: 15px;
+	background-color: white;
+	border: 2px solid #89c2d9;
+	border-radius: 10px;
+}
+
+.course-grid article:hover {
+	border-color: #fb6f92;
+}
+
+/* ---------- Flexbox: video and audio ---------- */
+.media-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+figure {
+	margin: 0 0 15px 0;
+}
+
+figcaption {
+	font-size: 14px;
+	font-style: italic;
+}
+
+/* ---------- Footer ---------- */
+footer {
+	max-width: 1200px;
+	margin: 20px auto 0 auto;
+	padding: 15px;
+	background-color: #013a63;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+
+footer p {
+	margin: 0;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+	.card {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+	body {
+		padding: 10px;
+	}
+
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.course-grid {
+		grid-template-columns: 1fr;
+	}
+}
